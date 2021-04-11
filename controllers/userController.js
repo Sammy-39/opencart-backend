@@ -20,7 +20,7 @@ const authUser = asyncHandler(async (req,res)=>{
         res.cookie("token", authToken, {
             expires: new Date(Date.now() + 86400000), 
             httpOnly: true,
-            //secure: true
+            secure: true
         })
         res.status(200).json({ 
             message: "Login Success!",
